@@ -84,7 +84,7 @@ export function About() {
               <p>{profile.bio3}</p>
             </div>
 
-            <div className="mt-8 grid grid-cols-3 gap-4 rounded-2xl bg-background p-6">
+            <div className="mt-8 grid grid-cols-2 gap-4 rounded-2xl bg-background p-6 sm:grid-cols-3">
               {profile.stats.map((stat) => (
                 <StatCounter key={stat.label} value={stat.value} label={stat.label} />
               ))}

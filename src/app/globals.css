@@ -127,6 +127,8 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
   html {
     scroll-behavior: smooth;
@@ -138,7 +140,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-4 py-20 md:px-8 md:py-28 lg:py-32;
+    @apply px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-28 lg:py-32;
   }
   .section-container {
     @apply mx-auto max-w-7xl;
@@ -171,6 +173,17 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (min-width: 768px) {

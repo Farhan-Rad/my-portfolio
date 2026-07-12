@@ -17,7 +17,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="pt-16">
-      <div className="relative aspect-[2/1] overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+      <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 sm:aspect-[2/1]">
         {project.image && (
           <Image
             src={project.image}
@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           Back to Projects
         </Link>
 
-        <h1 className="text-4xl font-bold tracking-tight md:text-5xl">{project.title}</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{project.title}</h1>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
 
-        <p className="mt-8 text-lg leading-relaxed text-muted-foreground">{project.description}</p>
+        <p className="mt-8 text-base leading-relaxed text-muted-foreground sm:text-lg">{project.description}</p>
 
         <div className="mt-8 flex flex-wrap gap-4">
           {project.githubUrl && (
@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-shadow hover:shadow-xl hover:shadow-primary/30"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-shadow hover:shadow-xl hover:shadow-primary/30 active:scale-95"
             >
               <GithubIcon width={18} height={18} />
               View Source Code
@@ -76,7 +76,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary active:scale-95"
             >
               <ExternalLink size={18} />
               Live Demo

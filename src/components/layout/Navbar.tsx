@@ -28,7 +28,7 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center px-4">
-        <button onClick={() => scrollTo('home')} className="text-xl font-bold text-primary shrink-0">
+        <button onClick={() => scrollTo('home')} className="truncate text-lg font-bold text-primary sm:text-xl shrink-0">
           FarhanR-Portfolio
         </button>
 
@@ -76,12 +76,12 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden border-t border-border/40 md:hidden"
           >
-            <div className="space-y-1 px-4 py-4">
+            <div className="space-y-1 px-4 py-6">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className={'w-full rounded-lg px-4 py-3 text-left text-sm font-medium transition-colors ' + (
+                  className={'w-full rounded-lg px-4 py-4 text-left text-base font-medium transition-colors ' + (
                     activeSection === item.id
                       ? 'bg-primary/10 text-primary'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'

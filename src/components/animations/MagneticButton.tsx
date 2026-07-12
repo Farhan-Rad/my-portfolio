@@ -1,5 +1,5 @@
 'use client';
-import { useRef, type MouseEvent } from 'react';
+import { useRef, useEffect, useState, type MouseEvent } from 'react';
 import { gsap } from 'gsap';
 
 interface MagneticButtonProps {
@@ -12,9 +12,14 @@ interface MagneticButtonProps {
 
 export function MagneticButton({ children, className, as: Tag = 'button', href, onClick }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  }, []);
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (!ref.current) return;
+    if (!ref.current || isTouchDevice) return;
     const rect = ref.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
@@ -28,7 +33,7 @@ export function MagneticButton({ children, className, as: Tag = 'button', href, 
   };
 
   const handleMouseLeave = () => {
-    if (!ref.current) return;
+    if (!ref.current || isTouchDevice) return;
     gsap.to(ref.current, {
       x: 0,
       y: 0,

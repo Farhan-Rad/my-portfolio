@@ -39,7 +39,7 @@ export function Skills() {
             const colorClass = colorMap[category.color];
             return (
               <ScrollReveal key={category.id} delay={i * 0.15}>
-                <div className="group rounded-2xl border border-border/50 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
+                <div className="group rounded-2xl border border-border/50 bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 sm:p-6">
                   <div className="flex items-center gap-4">
                     <div className={'rounded-xl p-3 ' + colorClass}>
                       {Icon && <Icon size={24} />}

@@ -57,7 +57,7 @@ export function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
-          <div className="mx-auto mt-8 h-32 w-32 overflow-hidden rounded-full border-4 border-primary/20 md:h-40 md:w-40">
+          <div className="mx-auto mt-8 h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 sm:h-32 sm:w-32 md:h-40 md:w-40">
             {profile.photo && (
               <Image
                 src={profile.photo}
@@ -73,14 +73,14 @@ export function Hero() {
 
         <h1
           ref={titleRef}
-          className="mt-6 text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl"
+          className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl lg:text-8xl"
         >
           Hi, I&apos;m{' '}
           <span className="text-primary">{nameChars}</span>
         </h1>
 
         <ScrollReveal delay={0.6}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg md:text-xl">
             {profile.tagline}
           </p>
         </ScrollReveal>
@@ -90,7 +90,7 @@ export function Hero() {
             <MagneticButton>
               <a
                 href="#works"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-shadow hover:shadow-xl hover:shadow-primary/30"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-shadow hover:shadow-xl hover:shadow-primary/30 active:scale-95"
               >
                 View My Works
                 <ChevronDown size={16} />
@@ -99,7 +99,7 @@ export function Hero() {
             <MagneticButton>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/50 hover:text-primary active:scale-95"
               >
                 Get In Touch
               </a>

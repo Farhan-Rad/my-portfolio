@@ -118,7 +118,7 @@ export function Contact() {
                     <input
                       {...register('name')}
                       placeholder="Your Name"
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3.5 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 min-h-[48px]"
                     />
                     {errors.name && (
                       <p className="mt-1 text-xs text-destructive">{errors.name.message}</p>
@@ -128,7 +128,7 @@ export function Contact() {
                     <input
                       {...register('email')}
                       placeholder="your@email.com"
-                      className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                      className="w-full rounded-xl border border-border bg-background px-4 py-3.5 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 min-h-[48px]"
                     />
                     {errors.email && (
                       <p className="mt-1 text-xs text-destructive">{errors.email.message}</p>
@@ -139,7 +139,7 @@ export function Contact() {
                   <input
                     {...register('subject')}
                     placeholder="Project Inquiry"
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3.5 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 min-h-[48px]"
                   />
                   {errors.subject && (
                     <p className="mt-1 text-xs text-destructive">{errors.subject.message}</p>
@@ -150,7 +150,7 @@ export function Contact() {
                     {...register('message')}
                     rows={5}
                     placeholder="Tell me about your project..."
-                    className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                    className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3.5 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 min-h-[48px]"
                   />
                   {errors.message && (
                     <p className="mt-1 text-xs text-destructive">{errors.message.message}</p>
@@ -160,7 +160,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 disabled:opacity-60"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 active:scale-95 disabled:opacity-60"
                   >
                     {submitting ? (
                       <>

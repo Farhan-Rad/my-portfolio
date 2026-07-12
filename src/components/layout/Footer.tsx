@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-surface">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-center text-sm text-muted-foreground md:text-left">
           &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>
         <div className="flex items-center gap-3">
