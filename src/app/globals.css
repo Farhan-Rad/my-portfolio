@@ -127,11 +127,13 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    max-width: 100vw;
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   ::selection {
     @apply bg-primary/20 text-primary;

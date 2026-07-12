@@ -108,7 +108,7 @@ export function HeroScene() {
   }, []);
 
   return (
-    <div className="absolute inset-0 -z-10">
+    <div className="absolute inset-0 -z-10 overflow-hidden">
       <Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={0.8} />

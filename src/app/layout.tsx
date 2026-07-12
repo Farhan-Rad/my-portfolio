@@ -38,7 +38,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={fontVar} suppressHydrationWarning>
-      <body className="min-h-screen overflow-x-hidden bg-background font-sans antialiased">
+      <body className="min-h-screen bg-background font-sans antialiased">
         <ThemeProvider>
           <SmoothScrollProvider>
             <LoadingScreen />
